@@ -5,7 +5,7 @@ import Switch from "./toggle";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Header = () => {
+const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ export const Header = () => {
   return (
     <div className="flex justify-between items-center mb-8">
       {isDarkMode ? (
-        <div className="relative flex items-center gap-x-2 mb-4 pt-8 text-white cursor-pointer">
-          <Link href="/">
+        <Link href="/">
+          <div className="relative flex items-center gap-x-2 mb-4 pt-8 text-white cursor-pointer">
             <Image
               alt="icon bees"
               src="icon-bees.svg"
@@ -43,11 +43,11 @@ export const Header = () => {
               className="hidden md:block"
               priority
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
       ) : (
-        <div className="">
-          <Link href="/">
+        <Link href="/">
+          <div className="">
             <Image
               src="/logo.png"
               alt="BEES Group Logo"
@@ -55,10 +55,12 @@ export const Header = () => {
               height={80}
               priority
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
       )}
       <Switch checked={isDarkMode} onChange={handleToggleDarkMode} />
     </div>
   );
 };
+
+export default Header;

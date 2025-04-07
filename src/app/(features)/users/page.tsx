@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { User } from "../../types";
 import { fetchUsers, updateUser, deleteUser } from "../../data/users";
-import { Header } from "../header/page";
+import Header from "../header/page";
 import UserTable from "./userTable";
 import Pagination from "./pagination";
 
 import EditUserModal from "./modal";
 
-export default function UsersPage() {
+const UsersPage = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -261,4 +261,6 @@ export default function UsersPage() {
       </div>
     </main>
   );
-}
+};
+
+export default UsersPage;

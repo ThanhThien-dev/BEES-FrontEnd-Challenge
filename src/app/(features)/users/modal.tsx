@@ -8,12 +8,12 @@ interface EditUserModalProps {
   onSave: (updatedData: Partial<User>) => Promise<void>;
 }
 
-export default function EditUserModal({
+const EditUserModal = ({
   isOpen,
   user,
   onClose,
   onSave,
-}: EditUserModalProps) {
+}: EditUserModalProps) => {
   const [formData, setFormData] = useState<Partial<User>>({});
 
   useEffect(() => {
@@ -126,4 +126,6 @@ export default function EditUserModal({
       </div>
     </div>
   );
-}
+};
+
+export default EditUserModal;
