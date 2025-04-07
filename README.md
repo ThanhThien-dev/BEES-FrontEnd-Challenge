@@ -32,7 +32,7 @@ This project implements the `processWithDelay` function as per the given require
 
 1. **Clone or Setup the Project:**
 
-   - Place `processWithDelay.ts` in a folder (e.g., `process-delay-test`).
+   - Place `processWithDelay.ts` in a folder (logic-test).
 
 2. **Install Dependencies:**
 
