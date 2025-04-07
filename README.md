@@ -61,12 +61,16 @@ This project implements the `processWithDelay` function as per the given require
 
 5. **Expected Output:**
 
-   - The script runs 5 test cases:
-     Test 1: Basic processing of [1, 2, 3].
-     Test 2: Empty array handling.
-     Test 3: Custom delay (2000ms) with progress tracking.
-     Test 4: Cancellation after 1.2s.
-     Test 5: Error handling for invalid input.
+The script runs 5 test cases:
+   - Test 1: Basic processing of [1, 2, 3].
+     
+   - Test 2: Empty array handling.
+     
+   - Test 3: Custom delay (2000ms) with progress tracking.
+     
+   - Test 4: Cancellation after 1.2s.
+     
+   - Test 5: Error handling for invalid input.
 
 ---
 
