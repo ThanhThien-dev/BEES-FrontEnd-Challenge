@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { User } from "../../types";
 import { fetchUsers, updateUser, deleteUser } from "../../data/users";
-import Header from "../header/page";
+import Header from "../../component/header/page";
 import UserTable from "./userTable";
 import Pagination from "./pagination";
 
