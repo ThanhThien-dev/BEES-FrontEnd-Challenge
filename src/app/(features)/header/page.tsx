@@ -5,7 +5,7 @@ import Switch from "./toggle";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -61,6 +61,4 @@ const Header = () => {
       <Switch checked={isDarkMode} onChange={handleToggleDarkMode} />
     </div>
   );
-};
-
-export default Header;
+}
