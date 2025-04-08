@@ -62,15 +62,12 @@ This project implements the `processWithDelay` function as per the given require
 5. **Expected Output:**
 
 The script runs 5 test cases:
-   - Test 1: Basic processing of [1, 2, 3].
-     
-   - Test 2: Empty array handling.
-     
-   - Test 3: Custom delay (2000ms) with progress tracking.
-     
-   - Test 4: Cancellation after 1.2s.
-     
-   - Test 5: Error handling for invalid input.
+
+- Test 1: Basic processing of [1, 2, 3].
+- Test 2: Empty array handling.
+- Test 3: Custom delay (2000ms) with progress tracking.
+- Test 4: Cancellation after 1.2s.
+- Test 5: Error handling for invalid input.
 
 ---
 
@@ -95,7 +92,7 @@ The app is a User Management Dashboard built with Next.js, designed to manage us
 
 - Error Handling: Displays a loading spinner while fetching data and shows an error message with a "Reload" button if the API request fails.
 
-- The app fetches user data from (https://mockapi.io/) (configured via NEXT_PUBLIC_API_URL) and transforms the response to fit the User type, adding a random status for each user. The UI is modular, with separate components for the table (UserTable), pagination (Pagination), and edit modal (EditUserModal), making the codebase easy to maintain and extend.
+- The app fetches user data from (https://mockapi.io/) ([https://mockapi.io/projects/67ed29554387d9117bbc825e]) and transforms the response to fit the User type, adding a random status for each user. The UI is modular, with separate components for the table (UserTable), pagination (Pagination), and edit modal (EditUserModal), making the codebase easy to maintain and extend.
 
 ## Technologies Used in the Project
 
@@ -122,11 +119,7 @@ The app is a User Management Dashboard built with Next.js, designed to manage us
    npm install
    This will install Next.js, React, Redux Toolkit, Tailwind CSS, Axios, Styled-Components, Date-fns, and other dependencies listed in package.json.
 
-3. Set Up Environment Variables:
-   Create a .env file in the root directory (if not already present) and add the API URL:
-   NEXT_PUBLIC_API_URL=(https://mockapi.io/projects/67ed29554387d9117bbc825e)
-
-4. Run the Development Server:
+3. Run the Development Server:
    Start the Next.js development server:
    npm run dev
    Open your browser and navigate to http://localhost:3000/users to see the user management page.

@@ -1,10 +1,11 @@
 import axios from "axios";
 import { User } from "../types";
 
-if (!process.env.NEXT_PUBLIC_API_URL) {
-  throw new Error("NEXT_PUBLIC_API_URL is not defined in .env");
+const API_URL: string =
+  "https://67ed29554387d9117bbc825d.mockapi.io/api/bees/users";
+if (!API_URL) {
+  throw new Error("API_URL is not defined in .env");
 }
-const API_URL: string = process.env.NEXT_PUBLIC_API_URL;
 
 // GET USERS
 export const fetchUsers = async (): Promise<User[]> => {
