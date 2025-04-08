@@ -8,7 +8,7 @@ interface UserTableProps {
   sortField: keyof User | null;
   sortDirection: "asc" | "desc";
   handleEditClick: (user: User) => void;
-  handleDelete: (userId: number) => void;
+  handleDelete: (userId: number | string) => void;
   handleSort: (field: keyof User) => void;
 }
 
