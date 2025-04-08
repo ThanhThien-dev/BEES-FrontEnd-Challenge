@@ -94,6 +94,9 @@ The app is a User Management Dashboard built with Next.js, designed to manage us
 
 - The app fetches user data from (https://mockapi.io/) ([https://mockapi.io/projects/67ed29554387d9117bbc825e]) and transforms the response to fit the User type, adding a random status for each user. The UI is modular, with separate components for the table (UserTable), pagination (Pagination), and edit modal (EditUserModal), making the codebase easy to maintain and extend.
 
+- I have deployed the app on Vercel for easy access. You can visit the live application here:
+  (https://bees-front-end-challenge.vercel.app/)
+
 ## Technologies Used in the Project
 
 - Next.js and React: The project is structured as a Next.js app, with the main page (users/page.tsx) rendering a user management interface. React components like UserTable, Pagination, and EditUserModal are used to modularize the UI.
