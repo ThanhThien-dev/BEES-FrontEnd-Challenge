@@ -87,7 +87,7 @@ The app is a User Management Dashboard built with Next.js, designed to manage us
 
 - Delete User: Users can delete a user by clicking the "Delete" button, with a confirmation prompt to prevent accidental deletions.
 
-- Dark Mode Toggle: A custom toggle switch (built with Styled-Components) allows users to switch between light and dark modes. The state is managed globally using Redux Toolkit and persists across page reloads via localStorage.
+- Dark Mode Toggle: A custom toggle switch (built with Styled-Components) allows users to switch between light and dark modes.
   Responsive Design: The app is fully responsive, with Tailwind CSS ensuring the layout adapts to different screen sizes (e.g., mobile, tablet, desktop).
 
 - Error Handling: Displays a loading spinner while fetching data and shows an error message with a "Reload" button if the API request fails.
@@ -102,8 +102,6 @@ The app is a User Management Dashboard built with Next.js, designed to manage us
 - Next.js and React: The project is structured as a Next.js app, with the main page (users/page.tsx) rendering a user management interface. React components like UserTable, Pagination, and EditUserModal are used to modularize the UI.
 
 - TypeScript: All components and logic are written in TypeScript to ensure type safety. For example, the User type is defined in types.ts and used across the app.
-
-- Redux Toolkit: The dark mode state (isDarkMode) is managed globally using Redux. A themeSlice is created to handle toggling and setting the dark mode, and the state is accessed in users/page.tsx using useSelector and useDispatch.
 
 - Tailwind CSS: Styling is done using Tailwind CSS classes, with dark mode support enabled via darkMode: "class" in tailwind.config.js. For example, dark:bg-gray-900 changes the background color in dark mode.
 
@@ -120,7 +118,7 @@ The app is a User Management Dashboard built with Next.js, designed to manage us
 
 2. Install the required packages:
    npm install
-   This will install Next.js, React, Redux Toolkit, Tailwind CSS, Axios, Styled-Components, Date-fns, and other dependencies listed in package.json.
+   This will install Next.js, React, Tailwind CSS, Axios, Styled-Components, Date-fns, and other dependencies listed in package.json.
 
 3. Run the Development Server:
    Start the Next.js development server:
