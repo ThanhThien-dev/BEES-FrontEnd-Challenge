@@ -19,17 +19,31 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
   // Function to generate page buttons based on the current page and total pages
   const generateButton = () => {
-    const pageButtons = [];
+    const pageButtons: JSX.Element[] = [];
     const maxPagesToShow = 5;
-    const ellipsis = <span className="px-3 py-1">...</span>;
+    const ellipsis = <span className="px-2 py-1">...</span>;
 
-    if (totalPages <= maxPagesToShow) {
-      // If total pages are less than maxPagesToShow show all
+    // Simplified logic for mobile: Only show Previous, Current Page, and Next
+    const isMobile = window.innerWidth < 640; // Adjust this breakpoint (sm: 640px)
+
+    if (isMobile) {
+      // On mobile, only show the current page
+      pageButtons.push(
+        <button
+          key={currentPage}
+          className="bg-blue-500 px-2 py-1 border rounded text-white"
+        >
+          {currentPage}
+        </button>
+      );
+    } else if (totalPages <= maxPagesToShow) {
+      // If total pages are less than maxPagesToShow, show all
       for (let i = 1; i <= totalPages; i++) {
         pageButtons.push(
           <button
+            key={i}
             onClick={() => handlePageChange(i)}
-            className={`px-3 py-1 border rounded ${
+            className={`px-2 py-1 border rounded ${
               currentPage === i ? "bg-blue-500 text-white" : ""
             }`}
           >
@@ -41,8 +55,9 @@ const Pagination: React.FC<PaginationProps> = ({
       // First page
       pageButtons.push(
         <button
+          key={1}
           onClick={() => handlePageChange(1)}
-          className={`px-3 py-1 border rounded ${
+          className={`px-2 py-1 border rounded ${
             currentPage === 1 ? "bg-blue-500 text-white" : ""
           }`}
         >
@@ -62,8 +77,9 @@ const Pagination: React.FC<PaginationProps> = ({
       for (let i = startPage; i <= endPage; i++) {
         pageButtons.push(
           <button
+            key={i}
             onClick={() => handlePageChange(i)}
-            className={`px-3 py-1 border rounded ${
+            className={`px-2 py-1 border rounded ${
               currentPage === i ? "bg-blue-500 text-white" : ""
             }`}
           >
@@ -80,8 +96,9 @@ const Pagination: React.FC<PaginationProps> = ({
       // Final page
       pageButtons.push(
         <button
+          key={totalPages}
           onClick={() => handlePageChange(totalPages)}
-          className={`px-3 py-1 border rounded ${
+          className={`px-2 py-1 border rounded ${
             currentPage === totalPages ? "bg-blue-500 text-white" : ""
           }`}
         >
@@ -94,17 +111,17 @@ const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div className="flex justify-between items-center mt-4">
-      <div className="dark:text-gray-200">
+    <div className="flex sm:flex-row flex-col sm:justify-between items-center gap-2 mt-4">
+      <div className="dark:text-gray-200 sm:text-left text-center">
         Showing {indexOfFirstUser + 1} to{" "}
         {Math.min(indexOfLastUser, processedUsersLength)} of{" "}
         {processedUsersLength} entries
       </div>
-      <div className="flex gap-2 dark:text-gray-200">
+      <div className="flex gap-1 sm:gap-2 dark:text-gray-200">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="disabled:opacity-50 px-3 py-1 border rounded"
+          className="disabled:opacity-50 px-2 py-1 border rounded"
         >
           Previous
         </button>
@@ -112,7 +129,7 @@ const Pagination: React.FC<PaginationProps> = ({
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="disabled:opacity-50 px-3 py-1 border rounded"
+          className="disabled:opacity-50 px-2 py-1 border rounded"
         >
           Next
         </button>

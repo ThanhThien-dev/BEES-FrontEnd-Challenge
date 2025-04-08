@@ -33,14 +33,13 @@ export default function Header() {
               priority
             />
 
-            <div className="hidden md:block bg-white w-[1px] h-6 text-white line"></div>
+            <div className="bg-white w-[1px] h-6 text-white line"></div>
 
             <Image
               alt="icon bee"
               src="text-bee.svg"
               width={87}
               height={31}
-              className="hidden md:block"
               priority
             />
           </div>
