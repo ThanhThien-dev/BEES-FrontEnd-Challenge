@@ -1,7 +1,7 @@
 import React from "react";
-import { User } from "../../types";
 import { format } from "date-fns";
 import { RiEdit2Line, RiDeleteBinLine } from "react-icons/ri";
+import { User } from "@/types";
 
 interface UserTableProps {
   currentUsers: User[];
@@ -115,7 +115,7 @@ const UserTable: React.FC<UserTableProps> = ({
                     <RiEdit2Line />
                   </button>
                   <button
-                    onClick={() => handleDelete(user.id)}
+                    onClick={() => handleDelete(Number(user.id))}
                     className="text-red-500 hover:text-red-700 cursor-pointer"
                     title="Delete"
                   >

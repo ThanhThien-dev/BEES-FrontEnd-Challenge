@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import Switch from "./toggle";
 import Image from "next/image";
 import Link from "next/link";
+import Switch from "./toggle";
 
 export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);

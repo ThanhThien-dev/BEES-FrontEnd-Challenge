@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { User } from "../../types";
-import { fetchUsers, updateUser, deleteUser } from "../../data/users";
-import Header from "../../component/header/page";
-import UserTable from "./userTable";
-import Pagination from "./pagination";
+import { User } from "../../../types";
+import Header from "../../../component/header";
+import UserTable from "../../../component/userTable";
+import Pagination from "../../../component/pagination";
 
-import EditUserModal from "./modal";
+import EditUserModal from "../../../component/modal";
+import { updateUser, deleteUser, fetchUsers } from "@/data/users";
 
 const UsersPage = () => {
   const [users, setUsers] = useState<User[]>([]);
