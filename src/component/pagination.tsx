@@ -19,7 +19,7 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
   // Function to generate page buttons based on the current page and total pages
   const generateButton = () => {
-    const pageButtons: JSX.Element[] = [];
+    const pageButtons: React.JSX.Element[] = [];
     const maxPagesToShow = 5;
     const ellipsis = <span className="px-2 py-1">...</span>;
 
